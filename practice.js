@@ -12,14 +12,15 @@ const products = [
       return totalPrice;
  }
 
- getTotalAmountForProducts(products)
+ const totalPrice1 = getTotalAmountForProducts(products)
 
+//Test2 
+const priceReducer = (total, product) => total + product.price;
+const totalPrice2 = products.reduce(priceReducer, 0);
 
-//Test
-const batteryBatches = [1, 2, 3, 4, 5, 16];
+//Test3
+const prices = products.map(product => product.price)
+const priceReducer2 = (total, price) => total + price
+const totalPrice3 =prices.reduce(priceReducer2, 0)
 
-const countBatteries = (totalAmt, batteryBatch) => totalAmt + batteryBatch;
-
-const totalBatteries = batteryBatches.reduce(countBatteries, 0)
-console.log(totalBatteries)
 
